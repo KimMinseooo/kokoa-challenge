@@ -1,0 +1,79 @@
+.friends-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: var(--yellow);
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+@keyframes lookatme1 {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.friends-display i {
+  color: black;
+  animation: lookatme1 0.5s ease-in-out infinite;
+  margin-left: 3px;
+}
+
+@keyframes lookatme {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.friends-display i:first-child {
+  color: tomato;
+  will-change: transform;
+  animation: lookatme 0.8s ease-in-out infinite;
+  outline: none;
+}
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--grey-color);
+}
+
+@keyframes moveDown {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  to {
+    transform: none;
+  }
+}
+.friends-screen__channel-header i:hover {
+  animation: moveDown 1s linear infinite;
+}

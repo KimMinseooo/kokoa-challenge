@@ -1,0 +1,51 @@
+/* 스크롤을 내리더라도 화면을 고정으로 하게끔 설정*/
+.status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 3px;
+}
+
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@keyframes warning {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.status-bar__column .fa-battery-quarter {
+  margin: 0px 5px;
+  color: tomato;
+  opacity: 1;
+  animation: warning 1.2s linear infinite;
+}
+
+.status-bar__column .fa-bolt {
+  margin-right: 5px;
+}
